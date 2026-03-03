@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.messagerie.messagerieapp.ui.LoginController"
+      prefWidth="1000" prefHeight="640"
+      minWidth="1000" minHeight="640">
+
+    <VBox prefWidth="440" prefHeight="640"
+          style="-fx-background-color: #3F0E40; -fx-padding: 60 52 60 52; -fx-spacing: 0;">
+        <HBox style="-fx-alignment: center-left; -fx-spacing: 10; -fx-padding: 0 0 60 0;">
+            <StackPane>
+                <Circle radius="18" fill="#ECB22E"/>
+                <Label text="M" style="-fx-text-fill: #3F0E40; -fx-font-size: 16; -fx-font-weight: bold;"/>
+            </StackPane>
+            <Label text="Messagerie" style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;"/>
+        </HBox>
+        <VBox spacing="20" prefHeight="200">
+            <Label text="Se connecter a votre espace"
+                   style="-fx-text-fill: white; -fx-font-size: 36; -fx-font-weight: bold; -fx-wrap-text: true;"/>
+            <Label text="Retrouvez vos conversations et messages en temps reel."
+                   style="-fx-text-fill: rgba(255,255,255,0.6); -fx-font-size: 14; -fx-wrap-text: true;"/>
+        </VBox>
+        <Region prefHeight="140"/>
+        <HBox spacing="24">
+            <VBox spacing="4">
+                <Label text="Temps reel" style="-fx-text-fill: #ECB22E; -fx-font-size: 13; -fx-font-weight: bold;"/>
+                <Label text="Messages instantanes" style="-fx-text-fill: rgba(255,255,255,0.5); -fx-font-size: 11;"/>
+            </VBox>
+            <VBox spacing="4">
+                <Label text="Securise" style="-fx-text-fill: #ECB22E; -fx-font-size: 13; -fx-font-weight: bold;"/>
+                <Label text="Chiffrement BCrypt" style="-fx-text-fill: rgba(255,255,255,0.5); -fx-font-size: 11;"/>
+            </VBox>
+        </HBox>
+    </VBox>
+
+    <VBox prefWidth="560" prefHeight="640"
+          style="-fx-background-color: #FFFFFF; -fx-alignment: center; -fx-padding: 60 64 60 64;">
+        <VBox prefWidth="380" style="-fx-spacing: 0;">
+            <Label text="Connexion"
+                   style="-fx-text-fill: #1D1C1D; -fx-font-size: 28; -fx-font-weight: bold;"/>
+            <Label text="Entrez vos identifiants pour continuer"
+                   style="-fx-text-fill: #616061; -fx-font-size: 13; -fx-padding: 6 0 28 0;"/>
+
+            <Label text="NOM D UTILISATEUR"
+                   style="-fx-text-fill: #616061; -fx-font-size: 11; -fx-font-weight: bold; -fx-padding: 0 0 6 0;"/>
+            <TextField fx:id="usernameField" promptText="votre_nom" prefWidth="380"
+                       style="-fx-background-color: #FFFFFF; -fx-text-fill: #1D1C1D;
+                              -fx-prompt-text-fill: #ABABAD; -fx-border-color: #DDDDDD;
+                              -fx-border-radius: 4; -fx-background-radius: 4;
+                              -fx-padding: 12 14 12 14; -fx-font-size: 14;"/>
+
+            <Label text="MOT DE PASSE"
+                   style="-fx-text-fill: #616061; -fx-font-size: 11; -fx-font-weight: bold; -fx-padding: 16 0 6 0;"/>
+            <PasswordField fx:id="passwordField" promptText="Mot de passe" prefWidth="380"
+                           style="-fx-background-color: #FFFFFF; -fx-text-fill: #1D1C1D;
+                                  -fx-prompt-text-fill: #ABABAD; -fx-border-color: #DDDDDD;
+                                  -fx-border-radius: 4; -fx-background-radius: 4;
+                                  -fx-padding: 12 14 12 14; -fx-font-size: 14;"/>
+
+            <Label fx:id="errorLabel" text=""
+                   style="-fx-text-fill: #E8412A; -fx-font-size: 12; -fx-padding: 8 0 0 0;"/>
+
+            <Button text="Se connecter" onAction="#handleLogin" prefWidth="380"
+                    style="-fx-background-color: #4A154B; -fx-text-fill: white;
+                           -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 4;
+                           -fx-padding: 14 0 14 0; -fx-cursor: hand; -fx-border-width: 0;"/>
+
+            <Separator style="-fx-padding: 16 0 0 0;"/>
+
+            <HBox style="-fx-alignment: center; -fx-spacing: 6; -fx-padding: 20 0 0 0;">
+                <Label text="Pas encore de compte ?" style="-fx-text-fill: #616061; -fx-font-size: 13;"/>
+                <Button text="Creer un compte" onAction="#handleRegister"
+                        style="-fx-background-color: transparent; -fx-text-fill: #1264A3;
+                               -fx-font-size: 13; -fx-cursor: hand; -fx-padding: 0; -fx-border-width: 0;"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</HBox>
